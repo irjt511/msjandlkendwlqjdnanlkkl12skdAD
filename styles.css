@@ -1,0 +1,99 @@
+/* تصميم عربي RTL حديث واحترافي */
+:root{
+  --bg: #0f172a;        /* slate-900 */
+  --bg-elev: #111827;   /* gray-900 */
+  --card: #0b1220;      /* deep panel */
+  --text: #e5e7eb;      /* gray-200 */
+  --muted: #9ca3af;     /* gray-400 */
+  --primary: #38bdf8;   /* sky-400 */
+  --accent: #22c55e;    /* green-500 */
+  --chip: #1f2937;      /* gray-800 */
+  --border: #1f2937;
+  --shadow: 0 10px 30px rgba(0,0,0,.35);
+  --radius-xl: 1.5rem;
+  --radius-lg: 1rem;
+  --radius-md: .75rem;
+}
+
+*{box-sizing:border-box}
+html,body{padding:0;margin:0;background:radial-gradient(1200px 800px at 100% -10%, rgba(34,197,94,.08), transparent 60%), radial-gradient(1000px 600px at -10% 0%, rgba(56,189,248,.08), transparent 60%), var(--bg); color:var(--text); font-family: ui-rounded, system-ui, -apple-system, "Segoe UI", Roboto, "Noto Kufi Arabic", Arial, sans-serif;}
+
+.container{max-width:1100px;margin-inline:auto;padding:1.2rem}
+
+.site-header{display:flex;align-items:center;justify-content:space-between;gap:1rem;position:sticky;top:0;background:linear-gradient(180deg, rgba(15,23,42,.85), rgba(15,23,42,.55));backdrop-filter: blur(8px);z-index:1000;border-bottom:1px solid rgba(255,255,255,.06)}
+.brand{display:flex;align-items:center;gap:.75rem}
+.logo{display:grid;place-items:center;width:2.5rem;height:2.5rem;border-radius:999px;background:linear-gradient(135deg, var(--primary), var(--accent));color:#001b2a;font-weight:900;box-shadow:var(--shadow)}
+.brand-name{font-size:1.05rem;letter-spacing:.3px}
+
+.nav{display:flex;gap:1rem;flex-wrap:wrap}
+.nav a{color:var(--text);text-decoration:none;padding:.6rem .8rem;border-radius:.7rem}
+.nav a:hover{background:rgba(255,255,255,.06)}
+
+.hero{display:grid;grid-template-columns:1.2fr .9fr;gap:2rem;align-items:center;min-height:70svh}
+.hero-text h1{font-size:clamp(1.8rem, 4vw, 2.6rem);margin:.2rem 0 1rem}
+.accent{background:linear-gradient(90deg,var(--primary),var(--accent));-webkit-background-clip:text;background-clip:text;color:transparent}
+.subtitle{color:var(--muted);margin-bottom:1rem}
+.cta{display:flex;gap:.8rem;flex-wrap:wrap;margin:.8rem 0 1rem}
+.btn{display:inline-block;padding:.8rem 1rem;border-radius:999px;border:1px solid var(--border);text-decoration:none;color:var(--text);box-shadow:var(--shadow);transition:transform .08s ease}
+.btn:hover{transform:translateY(-1px)}
+.btn.primary{background:linear-gradient(135deg,var(--primary), #60a5fa); color:#001b2a;border:none;font-weight:700}
+.btn.ghost{background:transparent}
+
+.meta{display:flex;gap:.5rem}
+.chip{background:var(--chip);border:1px solid var(--border);padding:.35rem .7rem;border-radius:999px;color:var(--muted);font-size:.9rem}
+
+.hero-card{display:grid}
+.id-card{background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02));border:1px solid rgba(255,255,255,.08);border-radius:var(--radius-xl);overflow:hidden;box-shadow:var(--shadow);transform:translateZ(0)}
+.id-top{position:relative;padding:1rem;background:linear-gradient(135deg, rgba(56,189,248,.18), rgba(34,197,94,.18))}
+.badge{background:#001b2a;color:var(--text);padding:.35rem .7rem;border-radius:999px;font-size:.85rem;border:1px solid rgba(255,255,255,.15)}
+.wave{position:absolute;left:0;right:0;bottom:-1px;height:28px;width:100%}
+.wave path{fill:rgba(255,255,255,.06)}
+.id-main{display:flex;gap:1rem;align-items:center;padding:1.2rem}
+.avatar{width:64px;height:64px;border-radius:1rem;background:linear-gradient(135deg, var(--primary), var(--accent));display:grid;place-items:center;color:#001b2a;font-weight:900;font-size:1.4rem}
+.id-info h2{margin:.2rem 0}
+.id-info p{margin:.2rem 0;color:var(--muted)}
+.tags{display:flex;gap:.5rem;flex-wrap:wrap;margin-top:.4rem}
+.tags span{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);padding:.3rem .6rem;border-radius:999px;font-size:.85rem}
+.id-footer{display:flex;align-items:center;gap:.8rem;padding:1rem;border-top:1px dashed rgba(255,255,255,.08)}
+.link{color:var(--primary);text-decoration:none}
+.sep{flex:1;border-top:1px dashed rgba(255,255,255,.08)}
+
+section{scroll-margin-top:90px}
+.about, .skills, .services, .contact{margin-block:2.5rem}
+.about p{line-height:1.9;color:var(--text)}
+
+.skills-grid{list-style:none;display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:.8rem;padding:0;margin:1rem 0 0}
+.skill{background:linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02));border:1px solid rgba(255,255,255,.08);padding:.9rem 1rem;border-radius:var(--radius-md);text-align:center;box-shadow:var(--shadow)}
+
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;margin-top:1rem}
+.card{background:linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02));border:1px solid rgba(255,255,255,.08);padding:1.1rem;border-radius:var(--radius-lg);min-height:120px;box-shadow:var(--shadow)}
+.card h4{margin:.2rem 0 .5rem}
+.card p{color:var(--muted)}
+
+.contact-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:1rem;align-items:start}
+.contact-card{background:linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02));border:1px solid rgba(255,255,255,.08);padding:1rem;border-radius:var(--radius-lg);box-shadow:var(--shadow)}
+.contact-card .row{display:flex;gap:.5rem;align-items:center;margin:.35rem 0}
+.label{color:var(--muted);min-width:70px}
+.contact-form{display:grid;gap:.8rem}
+.contact-form label{display:grid;gap:.35rem}
+input, textarea{background:var(--bg-elev);border:1px solid var(--border);color:var(--text);padding:.8rem;border-radius:.7rem;outline:none}
+input:focus, textarea:focus{border-color:var(--primary);box-shadow:0 0 0 3px rgba(56,189,248,.15)}
+.form-note{color:var(--muted);font-size:.9rem;margin:0}
+
+.footer{border-top:1px solid rgba(255,255,255,.06);margin-top:2.5rem}
+.footer .container{display:flex;justify-content:center;align-items:center;padding:1.2rem;color:var(--muted)}
+
+/* حركات ظهور بسيطة */
+.reveal{opacity:0;transform:translateY(16px);transition:opacity .6s ease, transform .6s ease}
+.reveal.visible{opacity:1;transform:none}
+
+/* تجاوب */
+@media (max-width: 900px){
+  .hero{grid-template-columns:1fr;gap:1.2rem}
+}
+
+@media (max-width: 640px){
+  .nav{display:none}
+  .site-header{justify-content:center}
+  .hero-text h1{font-size:1.8rem}
+}
